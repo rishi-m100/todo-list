@@ -18,11 +18,17 @@ jobs:
         with:
           node-version: 14
 
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
       - name: Install dependencies
-        run: npm install grpc --ignore-scripts
+        run: npm install
+        working-directory: /Users/rishimulchandani/github/todoist
 
       - name: Build project
         run: npm run build
+        working-directory: /Users/rishimulchandani/github/todoist
 
       - name: Deploy to Firebase
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        working-directory: /Users/rishimulchandani/github/todoist
