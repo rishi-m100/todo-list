@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 import { App } from "./App";
+
 // Import the functions you need from the SDKs you need
 import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
-
+import "firebase/compat/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,8 +20,8 @@ const firebaseConfig = {
   appId: "1:456802960158:web:6c0b1b5f77374b49903f0f",
   measurementId: "G-8DWFN7CVY8",
 };
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+const analytics = firebase.analytics();
+
 render(<App />, document.getElementById("root"));
