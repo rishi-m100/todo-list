@@ -9,4 +9,3 @@ To-Do List App | HTML/CSS (SCSS), JavaScript, React, NodeJS, Firebase, React Tes
 ## Hosted Version
 
 Check out the hosted version of the project [here](https://todo-list-35f2a.web.app/)
-<a href="http://example.com/" target="_blank">example</a>
